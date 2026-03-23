@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400" style="border: 3px solid"></canvas>
+    <script>
+
+        var ctx = document.getElementById("myCanvas");
+        var myContext = ctx.getContext("2d");
+
+        var gradeient = myContext.createLinearGradient(0, 0, 100, 0);
+        gradeient.addColorStop(0, "white");
+        gradeient.addColorStop(1, "blue");
+        myContext.fillStyle = gradeient;
+        myContext.fillRect(10, 10, 100, 100);
+
+        gradeient = myContext.createLinearGradient(150, 0, 250, 100);
+        gradeient.addColorStop(0, "white");
+        gradeient.addColorStop(1, "red");
+        myContext.fillStyle = gradeient;
+        myContext.fillRect(150, 10, 100, 100);
+
+        const ttr = myContext.createLinearGradient(350, 0, 450, 0);
+        ttr.addColorStop(0, "black");
+        ttr.addColorStop(1, "white");
+        myContext.fillStyle = ttr;
+        myContext.fillRect(350, 10, 100, 100);
+
+    </script>
+
+
+
+</body>
+
+</html>

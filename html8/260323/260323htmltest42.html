@@ -6,7 +6,7 @@
 
 <body>
     <script type="text/javascript">
-        function myPosition() {
+        function MyPosition() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(CurPosition, ErrorCallback);
             }
@@ -16,7 +16,7 @@
             var lng = position.coords.longitude;
             document.getElementById("result").innerHTML = "위도:" + lat + "경도:" + lng;
         }
-        
+
         function ErrorCallback(error) {
             switch (error.code) {
                 case error.PERMISSION_DENIED:
@@ -32,7 +32,8 @@
         }
     </script>
 
-    <button onClick="myPosition()" type="button">나의 현재 위치</button>
+    <button onClick="MyPosition()" type="button">나의 현재 위치</button>
+    <div id="result"></div>
 </body>
 
 </html>
