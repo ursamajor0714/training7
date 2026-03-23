@@ -10,10 +10,13 @@
 
 <body>
     <script>
-        var markerIcon = new google.maps.MarkerImage("");
-
+        var markerIcon = new google.maps.MarkerImage("marker.jpg");
+        var markerIcon = {
+            url: "marker.jpg",
+            scaledSize: new google.maps.Size(25, 25)
+        }
         function MyPos() {
-            alert("MyPos()");
+            //alert("MyPos()");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(CurPosition, ErrorCallback);
             }
