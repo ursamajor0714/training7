@@ -1,0 +1,11 @@
+s1 {
+    font-size: 20px;
+    font-family: 바탕체;
+    color: blue;
+}
+
+s2 {
+    font-size: 20px;
+    font-family: 볼드체;
+    color: rgb(255, 0, 0);
+}

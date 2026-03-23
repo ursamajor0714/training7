@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>히루루크의 낭만</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            /* 어두운 밤하늘 */
+            margin: 0;
+            overflow: hidden;
+            /* 벚꽃잎이 화면 밖으로 나가도 스크롤 안 생기게 */
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            color: white;
+            font-family: '궁서체', serif;
+        }
+
+        /* 명언 박스 */
+        .quote-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            top: 35%;
+        }
+
+        .quote {
+            font-size: 40px;
+            line-height: 1.6;
+            text-shadow: 0 0 20px #ffb7c5;
+            /* 벚꽃색 광채 */
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .sub-text {
+            font-size: 20px;
+            color: #ffb7c5;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* 벚꽃잎 종족 (공통 설정) */
+        .sakura {
+            position: absolute;
+            background-color: #ffb7c5;
+            /* 벚꽃 분홍색 */
+            border-radius: 100% 0 100% 0;
+            /* 꽃잎 모양 */
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        /* 벚꽃 떨어지는 애니메이션 */
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: translateX(0) rotate(0deg);
+            }
+
+            100% {
+                top: 110%;
+                transform: translateX(100px) rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 여러 개의 꽃잎을 랜덤하게 배치 (간단하게 5개 예시) */
+        .s1 {
+            width: 15px;
+            height: 15px;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .s2 {
+            width: 10px;
+            height: 10px;
+            left: 30%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .s3 {
+            width: 12px;
+            height: 12px;
+            left: 50%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+        .s4 {
+            width: 15px;
+            height: 15px;
+            left: 70%;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        .s5 {
+            width: 8px;
+            height: 8px;
+            left: 90%;
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+        }
+
+        .s6 {
+            width: 10px;
+            height: 10px;
+            left: 5%;
+            animation-duration: 9s;
+            animation-delay: 1.2s;
+        }
+
+        .s7 {
+            width: 14px;
+            height: 14px;
+            left: 18%;
+            animation-duration: 11s;
+            animation-delay: 0.2s;
+        }
+
+        .s8 {
+            width: 8px;
+            height: 8px;
+            left: 25%;
+            animation-duration: 6s;
+            animation-delay: 4.5s;
+        }
+
+        .s9 {
+            width: 12px;
+            height: 12px;
+            left: 35%;
+            animation-duration: 8.5s;
+            animation-delay: 2.1s;
+        }
+
+        .s10 {
+            width: 15px;
+            height: 15px;
+            left: 42%;
+            animation-duration: 13s;
+            animation-delay: 0.5s;
+        }
+
+        .s11 {
+            width: 9px;
+            height: 9px;
+            left: 55%;
+            animation-duration: 7s;
+            animation-delay: 3.3s;
+        }
+
+        .s12 {
+            width: 11px;
+            height: 11px;
+            left: 63%;
+            animation-duration: 10s;
+            animation-delay: 1.8s;
+        }
+
+        .s13 {
+            width: 13px;
+            height: 13px;
+            left: 75%;
+            animation-duration: 12s;
+            animation-delay: 2.5s;
+        }
+
+        .s14 {
+            width: 7px;
+            height: 7px;
+            left: 82%;
+            animation-duration: 5.5s;
+            animation-delay: 0.1s;
+        }
+
+        .s15 {
+            width: 14px;
+            height: 14px;
+            left: 95%;
+            animation-duration: 9.5s;
+            animation-delay: 3.9s;
+        }
+
+        .s16 {
+            width: 10px;
+            height: 10px;
+            left: 12%;
+            animation-duration: 8s;
+            animation-delay: 5.0s;
+        }
+
+        .s17 {
+            width: 12px;
+            height: 12px;
+            left: 22%;
+            animation-duration: 11s;
+            animation-delay: 1.5s;
+        }
+
+        .s18 {
+            width: 15px;
+            height: 15px;
+            left: 48%;
+            animation-duration: 14s;
+            animation-delay: 0.8s;
+        }
+
+        .s19 {
+            width: 8px;
+            height: 8px;
+            left: 58%;
+            animation-duration: 6.5s;
+            animation-delay: 2.7s;
+        }
+
+        .s20 {
+            width: 13px;
+            height: 13px;
+            left: 68%;
+            animation-duration: 9s;
+            animation-delay: 4.2s;
+        }
+
+        .s21 {
+            width: 11px;
+            height: 11px;
+            left: 78%;
+            animation-duration: 10.5s;
+            animation-delay: 1.1s;
+        }
+
+        .s22 {
+            width: 9px;
+            height: 9px;
+            left: 88%;
+            animation-duration: 7.5s;
+            animation-delay: 3.6s;
+        }
+
+        .s23 {
+            width: 14px;
+            height: 14px;
+            left: 3%;
+            animation-duration: 12.5s;
+            animation-delay: 0.3s;
+        }
+
+        .s24 {
+            width: 10px;
+            height: 10px;
+            left: 38%;
+            animation-duration: 8.2s;
+            animation-delay: 2.2s;
+        }
+
+        .s25 {
+            width: 12px;
+            height: 12px;
+            left: 92%;
+            animation-duration: 11.5s;
+            animation-delay: 4.8s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="sakura s1"></div>
+    <div class="sakura s2"></div>
+    <div class="sakura s3"></div>
+    <div class="sakura s4"></div>
+    <div class="sakura s5"></div>
+    <div class="sakura s6"></div>
+    <div class="sakura s7"></div>
+    <div class="sakura s8"></div>
+    <div class="sakura s9"></div>
+    <div class="sakura s10"></div>
+    <div class="sakura s11"></div>
+    <div class="sakura s12"></div>
+    <div class="sakura s13"></div>
+    <div class="sakura s14"></div>
+    <div class="sakura s15"></div>
+    <div class="sakura s16"></div>
+    <div class="sakura s17"></div>
+    <div class="sakura s18"></div>
+    <div class="sakura s19"></div>
+    <div class="sakura s20"></div>
+    <div class="sakura s21"></div>
+    <div class="sakura s22"></div>
+    <div class="sakura s23"></div>
+    <div class="sakura s24"></div>
+    <div class="sakura s25"></div>
+
+    <div class="quote-container">
+        <div class="quote">
+            "사람이 언제 죽는다고 생각하나? <br>
+            ...사람들에게서 잊혀졌을 때다!"
+        </div>
+        <div class="sub-text">- 닥터 히루루크 -</div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>크림빵교 포교문</title>
+    <style>
+        body {
+            background-color: #fff5e6;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            cursor: crosshair;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .madness-container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 10rem;
+            color: #ff9900;
+            text-shadow: 10px 10px 0px #fff, 20px 20px 0px #ffcc00;
+            animation: shake 0.1s infinite;
+        }
+
+        .floating-text {
+            position: absolute;
+            white-space: nowrap;
+            font-weight: bold;
+            color: #8b4513;
+            animation: drift linear infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-2px, -2px) rotate(1deg);
+            }
+
+            100% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+        }
+
+        @keyframes drift {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-size: 2rem;
+            display: inline-block;
+            margin: 10px;
+            padding: 5px;
+            border: 5px dashed red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="madness-container">
+        <h1>크림빵!!!</h1>
+        <div class="highlight">영양만점!</div>
+        <div class="highlight">남녀노소!</div>
+        <div class="highlight">즐거운 간식!</div>
+        <div class="highlight">완.벽.한.빵!</div>
+        <br>
+        <h2 style="font-size: 5rem; color: red;">드세요 여러분!!!<BR>제발!!!</h2>
+    </div>
+
+    <script>
+        const sentences = [
+            "크림빵은 신이다", "하얀 유혹", "탄수화물과 당의 축복",
+            "빵속의 크림", "누구나 즐길수있어", "완벽해!", "CREAM PAN!!!"
+        ];
+
+        function spawnText() {
+            const div = document.createElement('div');
+            div.className = 'floating-text';
+            div.innerText = sentences[Math.floor(Math.random() * sentences.length)];
+            div.style.left = Math.random() * 100 + "vw";
+            div.style.fontSize = (Math.random() * 3 + 1) + "rem";
+            div.style.animationDuration = (Math.random() * 2 + 1) + "s";
+            document.body.appendChild(div);
+
+            setTimeout(() => div.remove(), 3000);
+        }
+
+        setInterval(spawnText, 100);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400" style="border: 3px solid"></canvas>
+    <script type="text/javascript">
+        var ctx = document.getElementById("myCanvas");
+        var mycontext = ctx.getContext("2d");
+
+        mycontext.strokeRect(220, 10, 200, 150)
+        mycontext.fillRect(10, 170, 200, 150)
+        mycontext.fillRect(220, 170, 200, 150)
+        mycontext.clearRect(30, 250, 100, 50)
+
+
+    </script>
+
+
+</body>
+
+</html>
