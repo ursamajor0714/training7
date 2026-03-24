@@ -14,5 +14,13 @@ print(s2.strip('.'))
 s3 = '.,.나도고등학교.,.'
 print(s3.strip('.'))
 
-s4 = '나도고등학교'
-print(s4.replace('고등학교','고교'))
+print(s.replace('고등학교','고교'))
+print(s.find('학교'))
+print(s.find('너도'))
+print(s.center(50,'~'))
+
+bokbok=input()
+print(bokbok.len())
+
+
+
