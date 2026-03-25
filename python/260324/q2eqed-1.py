@@ -1,0 +1,5 @@
+a,b = map(int, input().split())
+a1=int(a/2)
+b1=int(b+10)
+c=int(a+b)
+print(f"{a1} {b1} {c}")
