@@ -1,4 +1,4 @@
-    E = int(input())
+E = int(input())
 F = int(input())
 G = ["+", "-", "*", "/", "//", "%", "**"]
 
