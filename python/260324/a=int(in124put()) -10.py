@@ -5,7 +5,7 @@
 #a=(b,c,d) << 다시 튜플
 
 
-#set{} set={"값1","값2"} << 세트는 
+#set{} set={"값1","값2"} << 세트는 수정이 가능하지만 순서가 존재하지 않는다.
 #A uniun B<< 합집합
 #(Adifference(B)) << 차집합
 #A intersection B << 교집합
