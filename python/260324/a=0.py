@@ -1,0 +1,10 @@
+my_list=['오예스','치킨','피자','초밥','피자','초밥']
+print(my_list)
+#my_set=set(my_list)
+#print(my_set)
+#my_list=list[my_set]
+#print(my_list)
+#my_dic=dict.fromkeys(my_list)
+#print(my_dic)
+#my_list=list(my_dic)
+#print(my_list)
