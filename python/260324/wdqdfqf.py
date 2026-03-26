@@ -23,3 +23,9 @@ print(set4)
 #issubset() 다른 세트의 부분집합인지
 #sisuperset() 다른 세트의 상위집합인지 여부
 #update() 여러 값 추가
+
+#discard() 값삭제(값 없어도 오류X)
+#isdisjoint() 겹치는지 여부 T or F
+#issubset() 다른 세트의 부분집합인지
+#sisuperset() 다른 세트의 상위집합인지 여부
+#update() 여러 값 추가

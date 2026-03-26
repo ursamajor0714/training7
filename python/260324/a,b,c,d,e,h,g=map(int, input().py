@@ -32,6 +32,10 @@ print(*results)
 
 
 
+
+
+
+
 list1 = []
 count = 0
 while count < 7:
