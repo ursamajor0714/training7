@@ -93,11 +93,30 @@
 
 #     print(1 if (a%4==0 and a%100!=0) or a%400==0 else 0)
 
-def a(b):
-    for i in range(b):
-        print("Hello")
-n, m = map(int, input().split())
+# def a(b):
+#     for i in range(b):
+#         print("Hello")
+# n, m = map(int, input().split())
 
-a(n)
-print()
-a(m)
+# a(n)
+# print()
+# a(m)
+
+# def F(B):
+#     if (B%4 == 0 and B%100 != 0 )or B%400==0 : 
+#         print("윤년")
+#     else:
+#         print("평년")
+# L = list(map(int, input().split()))
+
+# for y in L:
+#     F(y)
+
+n=int(input())
+i = 1
+while i <= n: 
+    if i%3 == 0 :
+        i +=1
+        continue
+    print(" ".join,i)
+    i += 1
