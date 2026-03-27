@@ -26,7 +26,7 @@
 #else : 
 #            print("F grade")
 
-house=for i in range(i)
+#house=for i in range(i)
 
 #i의 수 만큼 인풋이 들어온다
 #
