@@ -136,26 +136,75 @@
 
 
 
-a=int(input())
+# a=int(input())
 
-if a>=90 :
-    print("A")
-elif a>=80 :
-    print("B")
-elif a>=70 :
-    print("C")
-elif a>=60 :
-    print("D")
-else :
-    print("F")
-
-
-def a():
-    if a>=90 : "A"
-    elif a>=80 : "B"
-    elif a>=70 : "C"
-    elif a>=60 : "D"
-    else : "F"
+# if a>=90 :
+#     print("A")
+# elif a>=80 :
+#     print("B")
+# elif a>=70 :
+#     print("C")
+# elif a>=60 :
+#     print("D")
+# else :
+#     print("F")
 
 
+# def a():
+#     if a>=90 : "A"
+#     elif a>=80 : "B"
+#     elif a>=70 : "C"
+#     elif a>=60 : "D"
+#     else : "F"
 
+# from os import name
+
+
+# class BlackBox:
+#     pass
+
+# b1=BlackBox()
+# b1.name = '까망이'
+# print(b1.name)
+# print(isinstance(b1, BlackBox))
+
+
+# class BlackBox:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+#     def set_travel_mode(self):
+#         print('여행 모드 ON')
+
+# b1=BlackBox('까망이',200000)
+# b1.set_travel_mode()
+# print(b1.name, b1.price)
+# b2=BlackBox('하양이',100000)
+# print(b2.name, b2.price)
+
+
+
+
+# class Box:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+
+# a,b=input().split()
+# d=Box(a,b)
+# print(f"My name is {d.name}.")
+# print(f"I am {d.age} years old.")
+
+
+class Box:
+    def __init__(self,ct,lm,wc):
+        self.ct=ct
+        self.lm=lm
+        self.wc=wc
+    def print(self):
+        print(f"location: {self.ct}")
+        print(f"bedrooms: {self.lm}")
+        print(f"bathrooms: {self.wc}")
+ct,lm,wc=input().split()
+D=Box(ct,lm,wc)
+D.print()
