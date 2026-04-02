@@ -111,5 +111,96 @@
 
 # print("-".join(A))
 
-A=list(input().split())
-print("/".join(A))
+# A=list(input().split())
+# print("/".join(A))
+
+
+
+
+
+# a=int(input())
+# b=a*2-1
+
+# for i in range(1,b+1,2):
+#     print(((b - i) // 2) * " " + "*" * i)
+# for i in range(b-2,-1,-2):
+#     print(((b - i) // 2) * " " + "*" * i)
+
+
+
+# A=input()
+# B=A[::-1]
+
+# if A == B :
+#     print(1)
+# else:
+#     print(0)
+
+# A=list(input())
+# B=max(A, key=A.count)
+# C=[B]
+# if B>1:
+#     print("?")
+#     if B :
+#         print(B)
+
+
+# A=input().upper()
+# U=list(set(A))
+
+# C=[]
+
+# for x in U:
+#     C.append(A.count(x))
+
+# if C.count(max(C))> 1:
+#     print("?")
+# else:
+#     max_index = C.index(max(C))
+#     print(U[max_index])
+
+N=int(input())
+hap=[]
+
+for i in range(N):
+    RGB=list(map(int, input().split()))
+    hap.append(RGB)
+print(hap)
+
+
+
+
+
+import sys
+
+# 1. 입력 받기
+N = int(sys.stdin.readline())
+cost = []
+for _ in range(N):
+    cost.append(list(map(int, sys.stdin.readline().split())))
+
+# 2. 두 번째 줄부터 마지막 줄까지 누적합 계산 (DP)
+for i in range(1, N):
+    # 현재 빨강(0) = 현재 빨강 + min(이전 초록, 이전 파랑)
+    cost[i][0] += min(cost[i-1][1], cost[i-1][2])
+    # 현재 초록(1) = 현재 초록 + min(이전 빨강, 이전 파랑)
+    cost[i][1] += min(cost[i-1][0], cost[i-1][2])
+    # 현재 파랑(2) = 현재 파랑 + min(이전 빨강, 이전 초록)
+    cost[i][2] += min(cost[i-1][0], cost[i-1][1])
+
+# 3. 마지막 줄의 세 값 중 최솟값이 최종 정답
+print(min(cost[N-1]))
+
+26 40 83
+
+89 86 83
+
+96 >? 130
+
+
+
+3
+26 40 83
+89 86 83
+13 89 99
+
