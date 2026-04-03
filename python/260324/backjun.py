@@ -251,4 +251,94 @@
 # print(f"[{", ".join(A)}]")
 
 
- 
+# A=[]
+# for i in range(5):
+#     i=input()
+#     A.append(i)
+# B = A.copy()[::-1]
+# C = B.copy()
+# ii=input()
+# C.append(ii)
+# print(f"A = [{", ".join(A)}]")
+# print(f"B = [{", ".join(B)}]")
+# print(f"C = [{", ".join(C)}]")
+
+
+# A=[]
+
+# for i in range(5):
+#     i=int(input())
+#     A.append(i)
+# print(A[2:5])
+# print(A[4:1:-1])
+# print(A[::-1])
+
+
+
+# A=list(map(int, input().split()))
+# B=A.copy()[::-1]
+# C=[]
+# C=A.copy()[0::2]
+# print("A =",A)
+# print("B =",B)
+# print("C =",C)
+
+# A=[1,2,3]
+# B=[4,5]
+# C = A + B
+
+# print(C)
+# print(B*3)
+
+# i=int(input())
+
+# A=[2,3]
+# A.append(i)
+# print(A)
+# print(A*2)
+# print(A+A)
+
+# A=list(input().split())
+# B=A.copy()
+# B.extend(A[1:3])
+# B.extend(A[1])
+# print(A)
+# print(B)
+
+# A=[]
+# for i in range(4):
+#     i=int(input())
+#     A.append(i)
+
+# for ii in A:
+#     B = ii + 10
+#     print(B)
+
+# A=[]
+
+# for i in range(5):
+#     i = int(input())
+#     A.append(i)
+# print(A)
+# print(f"{' '.join(map(str,(A[0:5:2])))}")
+
+
+# 1. 리스트 선언
+A = [3, 5, 2, 1, 4]
+
+# 2. 선택 정렬 시작
+for i in range(len(A) - 1): # 마지막 하나는 자동으로 정렬되니 len(A)-1까지
+    B = i
+    
+    # 미정렬 구간에서 최솟값 찾기
+    for j in range(i + 1, len(A)):
+        if A[B] > A[j]:
+            B = j
+            
+    # 값 교환 (Swap)
+    A[i], A[B] = A[B], A[i]
+    
+    # 3. 각 회차마다 출력 (예제 출력과 동일하게!)
+    print(A)
+
+
